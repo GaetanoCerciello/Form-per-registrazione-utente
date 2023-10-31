@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="espd.css">
+    <style>
+        /* Stile per la modale */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid red; /* Linea rossa sul bordo sinistro */
+            padding: 20px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        /* Stile per il titolo della modale */
+        .modal-title {
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Stile per il messaggio di errore */
+        .error-message {
+            color: red;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal" id="ErrorConnectionModal">
+        <div class="modal-title">Messaggio di Errore</div>
+        <p class="error-message">Errore di connessione!</p>
+    </div>
+
+    <script>
+        // JavaScript per aprire la modale da un altro file
+        function openModal() {
+            var modal = document.getElementById('ErrorConnectionModal');
+            modal.style.display = 'block';
+        }
+        
+        // JavaScript per chiudere la modale
+        function closeModal() {
+            var modal = document.getElementById('ErrorConnectionModal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

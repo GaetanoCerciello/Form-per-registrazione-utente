@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it" ng-app>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <!-- Includi jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Includi Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Includi AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+
+    <script type="text/javascript" src="Submit.js"></script>
+
+</head>
+
+<body>
+    <div ng-include="'ErrorConnectionModal.html'"></div>
+    <div ng-include="'RegisterSuccess.html'"></div>
+
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Register Today</h3>
+
+                        <p>Fill in the data below.</p>
+                        <form class="requires-validation" novalidate>
+                            <!--Full Name-->
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                                <div class="valid-feedback">Username field is valid!</div>
+                                <div class="invalid-feedback">Username field cannot be blank!</div>
+                            </div>
+                            <!--Last Name-->
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="LastName" placeholder="Last Name" required>
+                                <div class="valid-feedback">Last name field is valid!</div>
+                                <div class="invalid-feedback">Last Name field cannot be blank!</div>
+                            </div>
+                            <!--email-->
+                            <div class="col-md-12">
+                                <input class="form-control" type="email" name="email" placeholder="E-mail Address"
+                                    required>
+                                <div class="valid-feedback">Email field is valid!</div>
+                                <div class="invalid-feedback">Email field cannot be blank!</div>
+                            </div>
+                            <!--codice fiscale-->
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="TaxNumber" placeholder="Tax Number"
+                                    required>
+                                <div class="valid-feedback">Email field is valid!</div>
+                                <div class="invalid-feedback">Email field cannot be blank!</div>
+                            </div>
+                            <!--Data di nascita-->
+                            <div class="col-md-12">
+                                <input class="form-control" type="date" name="BirthDate" placeholder="BirthDate"
+                                    required>
+                                <div class="valid-feedback">BirthDate field is valid!</div>
+                                <div class="invalid-feedback">Birthdate field cannot be blank!</div>
+                            </div>
+
+
+                            <div class="col-md-12 mt-3">
+                                
+                               
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label">I confirm that all data are correct</label>
+                                <div class="invalid-feedback">Please confirm that the entered data are all correct!
+                                </div>
+                            </div><br>
+
+
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                            </div>
+    
+
+
+
+
+                        </form>
+
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
